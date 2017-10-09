@@ -15,6 +15,12 @@
 	<br/>
 	<br/>
 	<a href="TestAwareAction?name=lisi">TestAwareAction</a>
+	<br/>
+	<br/>
+	<a href="TestServletActionContext">TestServletActionContext</a>
+	<br/>
+	<br/>
+	<a href="TestServletAwareAction">TestServletAwareAction</a>
 	
 	<% 
 		if(application.getAttribute("date") == null)
