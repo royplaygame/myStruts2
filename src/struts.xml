@@ -40,5 +40,11 @@
    
    </package>
    
+   <package name="testAction" namespace="/" extends="struts-default">
+   		<action name="TestActionContextAction" class="com.hy.ly.struts2.action.TestActionContextAction" method="execute">
+   			<result name="success">/test-actionContext.jsp</result>
+   		</action>
+   </package>
+   
 
 </struts>
