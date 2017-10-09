@@ -2,10 +2,13 @@ package com.hy.ly.struts2.action;
 
 import java.util.Map;
 
+import org.apache.struts2.dispatcher.SessionMap;
+
 import com.opensymphony.xwork2.ActionContext;
 
 public class TestActionContextAction {
 
+	@SuppressWarnings("rawtypes")
 	public String execute() {
 		// 0. 获取 ActionContext 对象
 		// ActionContext 是 Action 的上下文对象. 可以从中获取到当往 Action 需要的一切信息
@@ -22,6 +25,11 @@ public class TestActionContextAction {
 		Map<String,Object> sessionMap =actionContext.getSession();
 		sessionMap.put("sessionKey", "sessionValue");
 		System.out.println(sessionMap.getClass());
+		if(sessionMap instanceof SessionMap){
+			SessionMap sm = (SessionMap) sessionMap;
+			sm.invalidate();
+			System.out.println("session 失效了. ");
+		}
 		// 3. request*
 		// ActionContext 中并没有提供 getRequest 方法来获取 request 对应的 Map
 		// 需要手工调用 get() 方法, 传入 request 字符串来获取.

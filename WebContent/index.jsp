@@ -12,6 +12,9 @@
 	<br/>
 	<br/>
 	<a href="TestActionContextAction.action?name=zhangsan">TestActionContextAction</a>
+	<br/>
+	<br/>
+	<a href="TestAwareAction?name=lisi">TestAwareAction</a>
 	
 	<% 
 		if(application.getAttribute("date") == null)
