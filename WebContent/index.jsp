@@ -21,6 +21,9 @@
 	<br/>
 	<br/>
 	<a href="TestServletAwareAction">TestServletAwareAction</a>
+	<br/>
+	<br/>
+	<a href="login-ui.do">Login</a>
 	
 	<% 
 		if(application.getAttribute("date") == null)
